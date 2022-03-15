@@ -1,5 +1,5 @@
 FROM node:17-alpine3.14
-RUN addgroup app && adduser -S -G app app
+RUN addgroup app && adduser -S -G app app && mkdir app && chmod -R og+rwx app
 USER app
 WORKDIR /app
 COPY . .
